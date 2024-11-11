@@ -87,6 +87,7 @@ const AdminNotifier = {
         return await this.sendNotification(channel, htmlContent, options);
       } catch (error) {
         attempts++;
+        
         if (attempts > maxRetries) throw error;
 
         // รอก่อนลองใหม่
